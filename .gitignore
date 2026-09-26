@@ -1,0 +1,14 @@
+# Virtual machines, installation media, and credentials are not lab-report assets.
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.iso
+*.sav
+*.pem
+*.key
+.env
+.env.*
+tmp/
+output/
+__pycache__/
