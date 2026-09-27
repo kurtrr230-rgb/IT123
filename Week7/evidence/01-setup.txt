@@ -1,0 +1,381 @@
+2026-09-27T13:23:26+00:00
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           UP             10.0.2.15/24 metric 100 fd17:625c:f037:2:a00:27ff:fe30:e4a2/64 fe80::a00:27ff:fe30:e4a2/64 
+default via 10.0.2.2 dev enp0s3 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100 
+10.0.2.2 dev enp0s3 proto dhcp scope link src 10.0.2.15 metric 100 
+192.168.100.1 via 10.0.2.2 dev enp0s3 proto dhcp src 10.0.2.15 metric 100 
+Hit:1 http://ph.archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://ph.archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Get:3 http://ph.archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+Get:4 http://ph.archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [674 kB]
+Get:5 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Get:6 http://ph.archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [159 kB]
+Get:7 http://ph.archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [97.8 kB]
+Get:8 http://ph.archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [457 kB]
+Get:9 http://ph.archive.ubuntu.com/ubuntu resolute-updates/restricted Translation-en [90.8 kB]
+Get:10 http://ph.archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [302 kB]
+Get:11 http://ph.archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [96.7 kB]
+Get:12 http://ph.archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [190 kB]
+Get:13 http://ph.archive.ubuntu.com/ubuntu resolute-updates/multiverse Translation-en [3,172 B]
+Get:14 http://ph.archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Components [1,056 B]
+Get:15 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [526 kB]
+Get:16 http://security.ubuntu.com/ubuntu resolute-security/main Translation-en [123 kB]
+Get:17 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [46.7 kB]
+Get:18 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [437 kB]
+Get:19 http://security.ubuntu.com/ubuntu resolute-security/restricted Translation-en [86.2 kB]
+Get:20 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [177 kB]
+Get:21 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [56.3 kB]
+Get:22 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [43.4 kB]
+Get:23 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Packages [10.8 kB]
+Get:24 http://security.ubuntu.com/ubuntu resolute-security/multiverse Translation-en [2,844 B]
+Fetched 3,992 kB in 4s (887 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+bind9-dnsutils is already the newest version (1:9.20.24-1ubuntu0.3).
+bind9-dnsutils set to manually installed.
+ufw is already the newest version (0.36.2-9build1).
+ufw set to manually installed.
+openssl is already the newest version (3.5.5-1ubuntu3.5).
+openssl set to manually installed.
+Solving dependencies...
+The following packages were automatically installed and are no longer required:
+  linux-headers-7.0.0-30 linux-headers-7.0.0-30-generic
+  linux-image-unsigned-7.0.0-30-generic
+  linux-main-modules-zfs-7.0.0-30-generic linux-modules-7.0.0-30-generic
+  linux-tools-7.0.0-30 linux-tools-7.0.0-30-generic
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils dns-root-data isc-dhcp-common
+  libapr1t64 libaprutil1-dbd-sqlite3 libaprutil1-ldap libaprutil1t64
+  liblua5.4-0 ssl-cert
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser
+  bind9-doc isc-dhcp-server-ldap policycoreutils
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils bind9 bind9-utils
+  dns-root-data isc-dhcp-common isc-dhcp-server libapr1t64
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libaprutil1t64 liblua5.4-0 ssl-cert
+  udhcpc vsftpd
+0 upgraded, 17 newly installed, 0 to remove and 53 not upgraded.
+Need to get 3,976 kB of archives.
+After this operation, 14.6 MB of additional disk space will be used.
+Get:1 http://ph.archive.ubuntu.com/ubuntu resolute/universe amd64 isc-dhcp-server amd64 4.4.3-P1-4ubuntu2 [1,236 kB]
+Get:2 http://ph.archive.ubuntu.com/ubuntu resolute/main amd64 libapr1t64 amd64 1.7.6-3 [109 kB]
+Get:3 http://ph.archive.ubuntu.com/ubuntu resolute-updates/main amd64 libaprutil1t64 amd64 1.6.3-3ubuntu3.1 [93.3 kB]
+Get:4 http://ph.archive.ubuntu.com/ubuntu resolute-updates/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.3-3ubuntu3.1 [11.4 kB]
+Get:5 http://ph.archive.ubuntu.com/ubuntu resolute-updates/main amd64 libaprutil1-ldap amd64 1.6.3-3ubuntu3.1 [9,228 B]
+Get:6 http://ph.archive.ubuntu.com/ubuntu resolute/main amd64 liblua5.4-0 amd64 5.4.8-1build1 [163 kB]
+Get:7 http://ph.archive.ubuntu.com/ubuntu resolute-updates/main amd64 apache2-bin amd64 2.4.66-2ubuntu2.4 [1,355 kB]
+Get:8 http://ph.archive.ubuntu.com/ubuntu resolute-updates/main amd64 apache2-data all 2.4.66-2ubuntu2.4 [163 kB]
+Get:9 http://ph.archive.ubuntu.com/ubuntu resolute-updates/main amd64 apache2-utils amd64 2.4.66-2ubuntu2.4 [94.7 kB]
+Get:10 http://ph.archive.ubuntu.com/ubuntu resolute-updates/main amd64 apache2 amd64 2.4.66-2ubuntu2.4 [101 kB]
+Get:11 http://ph.archive.ubuntu.com/ubuntu resolute-updates/main amd64 bind9-utils amd64 1:9.20.24-1ubuntu0.3 [186 kB]
+Get:12 http://ph.archive.ubuntu.com/ubuntu resolute/main amd64 dns-root-data all 2025080400build1 [6,022 B]
+Get:13 http://ph.archive.ubuntu.com/ubuntu resolute-updates/main amd64 bind9 amd64 1:9.20.24-1ubuntu0.3 [259 kB]
+Get:14 http://ph.archive.ubuntu.com/ubuntu resolute/universe amd64 isc-dhcp-common amd64 4.4.3-P1-4ubuntu2 [45.8 kB]
+Get:15 http://ph.archive.ubuntu.com/ubuntu resolute/main amd64 ssl-cert all 1.1.3ubuntu2 [18.8 kB]
+Get:16 http://ph.archive.ubuntu.com/ubuntu resolute/universe amd64 udhcpc all 1:1.37.0-7ubuntu1 [2,740 B]
+Get:17 http://ph.archive.ubuntu.com/ubuntu resolute/main amd64 vsftpd amd64 3.0.5-0.4 [122 kB]
+Preconfiguring packages ...
+Fetched 3,976 kB in 13s (318 kB/s)
+Selecting previously unselected package isc-dhcp-server.
+(Reading database… (Reading database… 5%(Reading database… 10%(Reading database… 15%(Reading database… 20%(Reading database… 25%(Reading database… 30%(Reading database… 35%(Reading database… 40%(Reading database… 45%(Reading database… 50%(Reading database… 55%(Reading database… 60%(Reading database… 65%(Reading database… 70%(Reading database… 75%(Reading database… 80%(Reading database… 85%(Reading database… 90%(Reading database… 95%(Reading database… 100%(Reading database… 139567 files and directories currently installed.)
+Preparing to unpack …/00-isc-dhcp-server_4.4.3-P1-4ubuntu2_amd64.deb…
+Unpacking isc-dhcp-server (4.4.3-P1-4ubuntu2)…
+Selecting previously unselected package libapr1t64:amd64.
+Preparing to unpack …/01-libapr1t64_1.7.6-3_amd64.deb…
+Unpacking libapr1t64:amd64 (1.7.6-3)…
+Selecting previously unselected package libaprutil1t64:amd64.
+Preparing to unpack …/02-libaprutil1t64_1.6.3-3ubuntu3.1_amd64.deb…
+Unpacking libaprutil1t64:amd64 (1.6.3-3ubuntu3.1)…
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack …/03-libaprutil1-dbd-sqlite3_1.6.3-3ubuntu3.1_amd64.deb…
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.3-3ubuntu3.1)…
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack …/04-libaprutil1-ldap_1.6.3-3ubuntu3.1_amd64.deb…
+Unpacking libaprutil1-ldap:amd64 (1.6.3-3ubuntu3.1)…
+Selecting previously unselected package liblua5.4-0:amd64.
+Preparing to unpack …/05-liblua5.4-0_5.4.8-1build1_amd64.deb…
+Unpacking liblua5.4-0:amd64 (5.4.8-1build1)…
+Selecting previously unselected package apache2-bin.
+Preparing to unpack …/06-apache2-bin_2.4.66-2ubuntu2.4_amd64.deb…
+Unpacking apache2-bin (2.4.66-2ubuntu2.4)…
+Selecting previously unselected package apache2-data.
+Preparing to unpack …/07-apache2-data_2.4.66-2ubuntu2.4_all.deb…
+Unpacking apache2-data (2.4.66-2ubuntu2.4)…
+Selecting previously unselected package apache2-utils.
+Preparing to unpack …/08-apache2-utils_2.4.66-2ubuntu2.4_amd64.deb…
+Unpacking apache2-utils (2.4.66-2ubuntu2.4)…
+Selecting previously unselected package apache2.
+Preparing to unpack …/09-apache2_2.4.66-2ubuntu2.4_amd64.deb…
+Unpacking apache2 (2.4.66-2ubuntu2.4)…
+Selecting previously unselected package bind9-utils.
+Preparing to unpack …/10-bind9-utils_1%3a9.20.24-1ubuntu0.3_amd64.deb…
+Unpacking bind9-utils (1:9.20.24-1ubuntu0.3)…
+Selecting previously unselected package dns-root-data.
+Preparing to unpack …/11-dns-root-data_2025080400build1_all.deb…
+Unpacking dns-root-data (2025080400build1)…
+Selecting previously unselected package bind9.
+Preparing to unpack …/12-bind9_1%3a9.20.24-1ubuntu0.3_amd64.deb…
+Unpacking bind9 (1:9.20.24-1ubuntu0.3)…
+Selecting previously unselected package isc-dhcp-common.
+Preparing to unpack …/13-isc-dhcp-common_4.4.3-P1-4ubuntu2_amd64.deb…
+Unpacking isc-dhcp-common (4.4.3-P1-4ubuntu2)…
+Selecting previously unselected package ssl-cert.
+Preparing to unpack …/14-ssl-cert_1.1.3ubuntu2_all.deb…
+Unpacking ssl-cert (1.1.3ubuntu2)…
+Selecting previously unselected package udhcpc.
+Preparing to unpack …/15-udhcpc_1%3a1.37.0-7ubuntu1_all.deb…
+Unpacking udhcpc (1:1.37.0-7ubuntu1)…
+Selecting previously unselected package vsftpd.
+Preparing to unpack …/16-vsftpd_3.0.5-0.4_amd64.deb…
+Unpacking vsftpd (3.0.5-0.4)…
+Setting up isc-dhcp-server (4.4.3-P1-4ubuntu2)…
+Generating /etc/default/isc-dhcp-server...
+Created symlink '/etc/systemd/system/multi-user.target.wants/isc-dhcp-server.service' → '/usr/lib/systemd/system/isc-dhcp-server.service'.
+Created symlink '/etc/systemd/system/multi-user.target.wants/isc-dhcp-server6.service' → '/usr/lib/systemd/system/isc-dhcp-server6.service'.
+Setting up dns-root-data (2025080400build1)…
+Setting up bind9-utils (1:9.20.24-1ubuntu0.3)…
+Setting up ssl-cert (1.1.3ubuntu2)…
+Created symlink '/etc/systemd/system/multi-user.target.wants/ssl-cert.service' → '/usr/lib/systemd/system/ssl-cert.service'.
+Setting up vsftpd (3.0.5-0.4)…
+Created symlink '/etc/systemd/system/multi-user.target.wants/vsftpd.service' → '/usr/lib/systemd/system/vsftpd.service'.
+[0;1;39m/usr/lib/tmpfiles.d/vsftpd.conf:1: Line references path below legacy directory /var/run/, updating /var/run/vsftpd/empty → /run/vsftpd/empty; please update the tmpfiles.d/ drop-in file accordingly.[0m
+Setting up bind9 (1:9.20.24-1ubuntu0.3)…
+wrote key file "/etc/bind/rndc.key"
+named-resolvconf.service is a disabled or a static unit, not starting it.
+Created symlink '/etc/systemd/system/bind9.service' → '/usr/lib/systemd/system/named.service'.
+Created symlink '/etc/systemd/system/multi-user.target.wants/named.service' → '/usr/lib/systemd/system/named.service'.
+Setting up libapr1t64:amd64 (1.7.6-3)…
+Setting up liblua5.4-0:amd64 (5.4.8-1build1)…
+Setting up isc-dhcp-common (4.4.3-P1-4ubuntu2)…
+Setting up apache2-data (2.4.66-2ubuntu2.4)…
+Setting up udhcpc (1:1.37.0-7ubuntu1)…
+Setting up libaprutil1t64:amd64 (1.6.3-3ubuntu3.1)…
+Setting up libaprutil1-ldap:amd64 (1.6.3-3ubuntu3.1)…
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.3-3ubuntu3.1)…
+Setting up apache2-utils (2.4.66-2ubuntu2.4)…
+Setting up apache2-bin (2.4.66-2ubuntu2.4)…
+Setting up apache2 (2.4.66-2ubuntu2.4)…
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink '/etc/systemd/system/multi-user.target.wants/apache2.service' → '/usr/lib/systemd/system/apache2.service'.
+Created symlink '/etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service' → '/usr/lib/systemd/system/apache-htcacheclean.service'.
+Processing triggers for ufw (0.36.2-9build1)…
+Processing triggers for man-db (2.13.1-1build1)…
+Processing triggers for libc-bin (2.43-2ubuntu2.4)…
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+3: br-lab: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    inet 192.168.1.150/24 brd 192.168.1.255 scope global br-lab
+       valid_lft forever preferred_lft forever
+zone company.local/IN: loaded serial 2026092701
+OK
+zone example.local/IN: loaded serial 2026092701
+OK
+Internet Systems Consortium DHCP Server 4.4.3-P1
+Copyright 2004-2022 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+Config file: /etc/dhcp/dhcpd.conf
+Database file: /var/lib/dhcp/dhcpd.leases
+PID file: /var/run/dhcpd.pid
+Enabling conf week7-servername.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+Syntax OK
+..+..+...+.............+..+......+.+........+...+....+...+...+.....+++++++++++++++++++++++++++++++++++++++*.........+.....+.+++++++++++++++++++++++++++++++++++++++*..................+...+..............+....+.........+..+....++++++
+..+........+..........+...............+...+..+......+.+...........+..................+.+......+...+..+..........+++++++++++++++++++++++++++++++++++++++*.+.+............+..+......+.......+..+....+..+....+++++++++++++++++++++++++++++++++++++++*.+.......+..+...+.+.........+.....+...+..........+..+.+.....+......+................+........+.......+...+.........+...+.....+....+.........+.........+.....+.+.........+..+.+.........+.....+....+....................+......+....+..+...+....+...+..+...+.......+..++++++
+-----
+Rules updated
+Rules updated (v6)
+Rules updated
+Rules updated (v6)
+Rules updated
+Rules updated
+Rules updated
+Rules updated (v6)
+Rules updated
+Rules updated
+Rules updated
+Rules updated (v6)
+Rules updated
+Rules updated (v6)
+Default incoming policy changed to 'deny'
+(be sure to update your rules accordingly)
+Default outgoing policy changed to 'allow'
+(be sure to update your rules accordingly)
+Firewall is active and enabled on system startup
+Synchronizing state of named.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable named
+Synchronizing state of apache2.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable apache2
+Synchronizing state of isc-dhcp-server.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable isc-dhcp-server
+Synchronizing state of vsftpd.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable vsftpd
+● named.service - BIND Domain Name Server
+     Loaded: loaded (/usr/lib/systemd/system/named.service; enabled; preset: enabled)
+    Drop-In: /etc/systemd/system/named.service.d
+             └─week7-network.conf
+     Active: active (running) since Sun 2026-09-27 13:25:24 UTC; 3s ago
+ Invocation: 760677cbc13543848a25dfe39a1cc6a5
+       Docs: man:named(8)
+   Main PID: 4840 (named)
+     Status: "running"
+      Tasks: 6 (limit: 1885)
+     Memory: 5.3M (peak: 5.6M)
+        CPU: 178ms
+     CGroup: /system.slice/named.service
+             └─4840 /usr/sbin/named -f -u bind
+
+Sep 27 13:25:24 it123 named[4840]: network unreachable resolving './DNSKEY/IN': 2001:500:2::c#53
+Sep 27 13:25:24 it123 named[4840]: network unreachable resolving './NS/IN': 2001:500:2::c#53
+Sep 27 13:25:24 it123 named[4840]: network unreachable resolving './DNSKEY/IN': 2001:503:ba3e::2:30#53
+Sep 27 13:25:24 it123 named[4840]: network unreachable resolving './NS/IN': 2001:503:ba3e::2:30#53
+Sep 27 13:25:24 it123 named[4840]: network unreachable resolving './DNSKEY/IN': 2001:7fe::53#53
+Sep 27 13:25:24 it123 named[4840]: network unreachable resolving './NS/IN': 2001:7fe::53#53
+Sep 27 13:25:24 it123 named[4840]: network unreachable resolving './DNSKEY/IN': 2001:503:c27::2:30#53
+Sep 27 13:25:24 it123 named[4840]: network unreachable resolving './DNSKEY/IN': 2001:500:2::c#53
+Sep 27 13:25:24 it123 named[4840]: managed-keys-zone: Key 20326 for zone . is now trusted (acceptance timer complete)
+Sep 27 13:25:24 it123 named[4840]: managed-keys-zone: Key 38696 for zone . is now trusted (acceptance timer complete)
+
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/apache2.service; enabled; preset: enabled)
+     Active: active (running) since Sun 2026-09-27 13:25:24 UTC; 3s ago
+ Invocation: 7dd833804c864a0caf24bdee43b7c1d7
+       Docs: https://httpd.apache.org/docs/2.4/
+   Main PID: 4853 (apache2)
+     Status: "Processing requests..."
+      Tasks: 55 (limit: 1885)
+     Memory: 5.3M (peak: 5.4M)
+        CPU: 205ms
+     CGroup: /system.slice/apache2.service
+             ├─4853 /usr/sbin/apache2 -k start -DFOREGROUND
+             ├─4860 /usr/sbin/apache2 -k start -DFOREGROUND
+             └─4862 /usr/sbin/apache2 -k start -DFOREGROUND
+
+Sep 27 13:25:24 it123 systemd[1]: Starting apache2.service - The Apache HTTP Server...
+Sep 27 13:25:24 it123 systemd[1]: Started apache2.service - The Apache HTTP Server.
+
+● isc-dhcp-server.service - ISC DHCP IPv4 server
+     Loaded: loaded (/usr/lib/systemd/system/isc-dhcp-server.service; enabled; preset: enabled)
+    Drop-In: /etc/systemd/system/isc-dhcp-server.service.d
+             └─week7-network.conf
+     Active: active (running) since Sun 2026-09-27 13:25:24 UTC; 3s ago
+ Invocation: d70faf08279a4ed591d3943081e7ef2e
+       Docs: man:dhcpd(8)
+   Main PID: 4828 (dhcpd)
+      Tasks: 1 (limit: 1885)
+     Memory: 3.7M (peak: 4.1M)
+        CPU: 115ms
+     CGroup: /system.slice/isc-dhcp-server.service
+             └─4828 dhcpd -user dhcpd -group dhcpd -f -4 -pf /run/dhcp-server/dhcpd.pid -cf /etc/dhcp/dhcpd.conf br-lab
+
+Sep 27 13:25:24 it123 dhcpd[4828]: Database file: /var/lib/dhcp/dhcpd.leases
+Sep 27 13:25:24 it123 dhcpd[4828]: PID file: /run/dhcp-server/dhcpd.pid
+Sep 27 13:25:24 it123 dhcpd[4828]: Wrote 0 leases to leases file.
+Sep 27 13:25:24 it123 dhcpd[4828]: Listening on LPF/br-lab/de:59:b3:cc:5d:26/192.168.1.0/24
+Sep 27 13:25:24 it123 sh[4828]: Listening on LPF/br-lab/de:59:b3:cc:5d:26/192.168.1.0/24
+Sep 27 13:25:24 it123 sh[4828]: Sending on   LPF/br-lab/de:59:b3:cc:5d:26/192.168.1.0/24
+Sep 27 13:25:24 it123 sh[4828]: Sending on   Socket/fallback/fallback-net
+Sep 27 13:25:24 it123 dhcpd[4828]: Sending on   LPF/br-lab/de:59:b3:cc:5d:26/192.168.1.0/24
+Sep 27 13:25:24 it123 dhcpd[4828]: Sending on   Socket/fallback/fallback-net
+Sep 27 13:25:24 it123 dhcpd[4828]: Server starting service.
+
+● vsftpd.service - vsftpd FTP server
+     Loaded: loaded (/usr/lib/systemd/system/vsftpd.service; enabled; preset: enabled)
+    Drop-In: /etc/systemd/system/vsftpd.service.d
+             └─week7-network.conf
+     Active: active (running) since Sun 2026-09-27 13:25:24 UTC; 3s ago
+ Invocation: 427efd6a0e864126b5e30327b5b4bc60
+    Process: 4830 ExecStartPre=/bin/mkdir -p /var/run/vsftpd/empty (code=exited, status=0/SUCCESS)
+   Main PID: 4833 (vsftpd)
+      Tasks: 1 (limit: 1885)
+     Memory: 1.4M (peak: 1.7M)
+        CPU: 74ms
+     CGroup: /system.slice/vsftpd.service
+             └─4833 /usr/sbin/vsftpd /etc/vsftpd.conf
+
+Sep 27 13:25:24 it123 systemd[1]: Starting vsftpd.service - vsftpd FTP server...
+Sep 27 13:25:24 it123 systemd[1]: Started vsftpd.service - vsftpd FTP server.
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+192.168.1.150 40000:40010/tcp on br-lab ALLOW IN    192.168.1.0/24            
+192.168.1.150 21/tcp on br-lab ALLOW IN    192.168.1.0/24            
+67/udp on br-lab           ALLOW IN    Anywhere                  
+192.168.1.150 53/tcp on br-lab ALLOW IN    192.168.1.0/24            
+192.168.1.150 53/udp on br-lab ALLOW IN    192.168.1.0/24            
+21/tcp                     DENY IN     Anywhere                  
+40000:40010/tcp            DENY IN     Anywhere                  
+22/tcp                     ALLOW IN    Anywhere                  
+80/tcp                     ALLOW IN    Anywhere                  
+21/tcp (v6)                DENY IN     Anywhere (v6)             
+40000:40010/tcp (v6)       DENY IN     Anywhere (v6)             
+22/tcp (v6)                ALLOW IN    Anywhere (v6)             
+80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+67/udp (v6) on br-lab      ALLOW IN    Anywhere (v6)             
+
+Server:		127.0.0.1
+Address:	127.0.0.1#53
+
+Name:	www.company.local
+Address: 192.168.1.150
+
+Server:		127.0.0.1
+Address:	127.0.0.1#53
+
+Name:	www.example.local
+Address: 192.168.1.150
+
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100    789 100    789   0      0  87569      0                              0100    789 100    789   0      0  66926      0                              0100    789 100    789   0      0  62204      0                              0
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Company Intranet</title>
+<style>body{font-family:Arial,sans-serif;margin:0;background:#edf3f8;color:#16304a}main{max-width:780px;margin:12vh auto;padding:48px;background:white;border-top:7px solid #087f8c;border-radius:8px}h1{font-size:36px;line-height:1.2}p{font-size:20px;line-height:1.6}.label{font-size:14px;color:#087f8c;letter-spacing:2px}code{background:#edf3f8;padding:4px 8px}</style></head>
+<body><main><p class="label">IT 123 · WEEK 7</p><h1>Welcome to Company Intranet</h1>
+<p>Server IP: <strong>192.168.1.150</strong></p>
+<p>Internal website: <code>www.company.local</code></p>
+<p>DNS · DHCP · HTTP · Secure FTP</p></main></body></html>
+WEEK7_SETUP_COMPLETE

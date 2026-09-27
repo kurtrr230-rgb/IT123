@@ -1,0 +1,180 @@
+2026-09-27T13:26:07+00:00
+=== CONFIGURATION VALIDATION ===
+zone company.local/IN: loaded serial 2026092701
+OK
+zone example.local/IN: loaded serial 2026092701
+OK
+Internet Systems Consortium DHCP Server 4.4.3-P1
+Copyright 2004-2022 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+Config file: /etc/dhcp/dhcpd.conf
+Database file: /var/lib/dhcp/dhcpd.leases
+PID file: /var/run/dhcpd.pid
+Syntax OK
+active
+active
+active
+active
+enabled
+enabled
+enabled
+enabled
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           UP             10.0.2.15/24 metric 100 fd17:625c:f037:2:a00:27ff:fe30:e4a2/64 fe80::a00:27ff:fe30:e4a2/64 
+br-lab           DOWN           192.168.1.150/24 
+Netid State  Recv-Q Send-Q    Local Address:Port Peer Address:PortProcess                                                                               
+udp   UNCONN 0      0             127.0.0.1:323       0.0.0.0:*    users:(("chronyd",pid=1060,fd=4))                                                    
+udp   UNCONN 0      0         192.168.1.150:53        0.0.0.0:*    users:(("named",pid=4840,fd=35))                                                     
+udp   UNCONN 0      0         192.168.1.150:53        0.0.0.0:*    users:(("named",pid=4840,fd=34))                                                     
+udp   UNCONN 0      0             127.0.0.1:53        0.0.0.0:*    users:(("named",pid=4840,fd=29))                                                     
+udp   UNCONN 0      0             127.0.0.1:53        0.0.0.0:*    users:(("named",pid=4840,fd=28))                                                     
+udp   UNCONN 0      0            127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=586,fd=18))                                            
+udp   UNCONN 0      0         127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=586,fd=16))                                            
+udp   UNCONN 0      0               0.0.0.0:67        0.0.0.0:*    users:(("dhcpd",pid=4828,fd=7))                                                      
+udp   UNCONN 0      0      10.0.2.15%enp0s3:68        0.0.0.0:*    users:(("systemd-network",pid=808,fd=34))                                            
+udp   UNCONN 0      0                 [::1]:323          [::]:*    users:(("chronyd",pid=1060,fd=5))                                                    
+tcp   LISTEN 0      4096      127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=586,fd=17))                                            
+tcp   LISTEN 0      4096            0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=1447,fd=3),("systemd",pid=1,fd=247))                              
+tcp   LISTEN 0      32        192.168.1.150:21        0.0.0.0:*    users:(("vsftpd",pid=4833,fd=3))                                                     
+tcp   LISTEN 0      4096         127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=586,fd=19))                                            
+tcp   LISTEN 0      10        192.168.1.150:53        0.0.0.0:*    users:(("named",pid=4840,fd=37))                                                     
+tcp   LISTEN 0      10        192.168.1.150:53        0.0.0.0:*    users:(("named",pid=4840,fd=36))                                                     
+tcp   LISTEN 0      5             127.0.0.1:953       0.0.0.0:*    users:(("named",pid=4840,fd=39))                                                     
+tcp   LISTEN 0      10            127.0.0.1:53        0.0.0.0:*    users:(("named",pid=4840,fd=32))                                                     
+tcp   LISTEN 0      10            127.0.0.1:53        0.0.0.0:*    users:(("named",pid=4840,fd=30))                                                     
+tcp   LISTEN 0      511                   *:80              *:*    users:(("apache2",pid=4862,fd=4),("apache2",pid=4860,fd=4),("apache2",pid=4853,fd=4))
+tcp   LISTEN 0      4096               [::]:22           [::]:*    users:(("sshd",pid=1447,fd=4),("systemd",pid=1,fd=261))                              
+tcp   LISTEN 0      5                 [::1]:953          [::]:*    users:(("named",pid=4840,fd=40))                                                     
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 192.168.1.150 40000:40010/tcp on br-lab ALLOW IN    192.168.1.0/24            
+[ 2] 192.168.1.150 21/tcp on br-lab ALLOW IN    192.168.1.0/24            
+[ 3] 67/udp on br-lab           ALLOW IN    Anywhere                  
+[ 4] 192.168.1.150 53/tcp on br-lab ALLOW IN    192.168.1.0/24            
+[ 5] 192.168.1.150 53/udp on br-lab ALLOW IN    192.168.1.0/24            
+[ 6] 21/tcp                     DENY IN     Anywhere                  
+[ 7] 40000:40010/tcp            DENY IN     Anywhere                  
+[ 8] 22/tcp                     ALLOW IN    Anywhere                  
+[ 9] 80/tcp                     ALLOW IN    Anywhere                  
+[10] 21/tcp (v6)                DENY IN     Anywhere (v6)             
+[11] 40000:40010/tcp (v6)       DENY IN     Anywhere (v6)             
+[12] 22/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[13] 80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[14] 67/udp (v6) on br-lab      ALLOW IN    Anywhere (v6)             
+
+=== ISOLATED DHCP CLIENT ===
+udhcpc: started, v1.37.0
+udhcpc: broadcasting discover
+udhcpc: broadcasting select for 192.168.1.160, server 192.168.1.150
+udhcpc: lease of 192.168.1.160 obtained from 192.168.1.150, lease time 600
+DHCP address=192.168.1.160 subnet=255.255.255.0 DNS=192.168.1.150 domain=company.local
+CLIENT_ADDRESS=192.168.1.160/24
+=== CLIENT DNS UDP AND TCP ===
+Server:		192.168.1.150
+Address:	192.168.1.150#53
+
+Name:	www.company.local
+Address: 192.168.1.150
+
+
+; <<>> DiG 9.20.24-1ubuntu0.3-Ubuntu <<>> +tcp @192.168.1.150 www.company.local
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; WARNING: .local is reserved for Multicast DNS
+;; You are currently testing what happens when an mDNS query is leaked to DNS
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 48402
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 7685690c74f2d8d2010000006ab91972be48e5c33f47de65 (good)
+;; QUESTION SECTION:
+;www.company.local.		IN	A
+
+;; ANSWER SECTION:
+www.company.local.	604800	IN	A	192.168.1.150
+
+;; Query time: 0 msec
+;; SERVER: 192.168.1.150#53(192.168.1.150) (TCP)
+;; WHEN: Sun Sep 27 13:26:10 UTC 2026
+;; MSG SIZE  rcvd: 90
+
+Server:		127.0.0.1
+Address:	127.0.0.1#53
+
+Name:	www.example.local
+Address: 192.168.1.150
+
+=== CLIENT HTTP ===
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100    789 100    789   0      0 381.8k      0                              0100    789 100    789   0      0 374.3k      0                              0100    789 100    789   0      0 368.4k      0                              0
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Company Intranet</title>
+<style>body{font-family:Arial,sans-serif;margin:0;background:#edf3f8;color:#16304a}main{max-width:780px;margin:12vh auto;padding:48px;background:white;border-top:7px solid #087f8c;border-radius:8px}h1{font-size:36px;line-height:1.2}p{font-size:20px;line-height:1.6}.label{font-size:14px;color:#087f8c;letter-spacing:2px}code{background:#edf3f8;padding:4px 8px}</style></head>
+<body><main><p class="label">IT 123 · WEEK 7</p><h1>Welcome to Company Intranet</h1>
+<p>Server IP: <strong>192.168.1.150</strong></p>
+<p>Internal website: <code>www.company.local</code></p>
+<p>DNS · DHCP · HTTP · Secure FTP</p></main></body></html>
+
+<body><main><p class="label">IT 123 · WEEK 7</p><h1>Welcome to Company Intranet</h1>
+=== ENCRYPTED FTP UPLOAD AND DOWNLOAD ===
+FTPS TLS: TLSv1.3
+PASS: encrypted login, upload, download and exact content comparison
+PASS: plaintext login rejected: 530 Non-anonymous sessions must use encryption.
+=== OUTSIDE-LAN FTP RESTRICTION ===
+PASS: outside test route reaches Apache
+PASS: outside-LAN TCP 21 blocked (timeout)
+PASS: outside-LAN TCP 40000 blocked (timeout)
+=== DHCP LEASE AND SERVICE LOG ===
+# The format of this file is documented in the dhcpd.leases(5) manual page.
+# This lease file was written by isc-dhcp-4.4.3-P1
+
+# authoring-byte-order entry is generated, DO NOT DELETE
+authoring-byte-order little-endian;
+
+server-duid "\000\001\000\0012K\325\304\336Y\263\314]&";
+
+lease 192.168.1.160 {
+  starts 0 2026/09/27 13:26:09;
+  ends 0 2026/09/27 13:36:09;
+  cltt 0 2026/09/27 13:26:09;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 02:00:00:07:00:01;
+  uid "\001\002\000\000\007\000\001";
+  set vendor-class-identifier = "udhcp 1.37.0";
+}
+Sep 27 13:25:24 it123 sh[4828]: Internet Systems Consortium DHCP Server 4.4.3-P1
+Sep 27 13:25:24 it123 sh[4828]: Copyright 2004-2022 Internet Systems Consortium.
+Sep 27 13:25:24 it123 sh[4828]: All rights reserved.
+Sep 27 13:25:24 it123 sh[4828]: For info, please visit https://www.isc.org/software/dhcp/
+Sep 27 13:25:24 it123 dhcpd[4828]: All rights reserved.
+Sep 27 13:25:24 it123 dhcpd[4828]: For info, please visit https://www.isc.org/software/dhcp/
+Sep 27 13:25:24 it123 dhcpd[4828]: Config file: /etc/dhcp/dhcpd.conf
+Sep 27 13:25:24 it123 sh[4828]: Config file: /etc/dhcp/dhcpd.conf
+Sep 27 13:25:24 it123 sh[4828]: Database file: /var/lib/dhcp/dhcpd.leases
+Sep 27 13:25:24 it123 sh[4828]: PID file: /run/dhcp-server/dhcpd.pid
+Sep 27 13:25:24 it123 sh[4828]: Wrote 0 leases to leases file.
+Sep 27 13:25:24 it123 dhcpd[4828]: Database file: /var/lib/dhcp/dhcpd.leases
+Sep 27 13:25:24 it123 dhcpd[4828]: PID file: /run/dhcp-server/dhcpd.pid
+Sep 27 13:25:24 it123 dhcpd[4828]: Wrote 0 leases to leases file.
+Sep 27 13:25:24 it123 dhcpd[4828]: Listening on LPF/br-lab/de:59:b3:cc:5d:26/192.168.1.0/24
+Sep 27 13:25:24 it123 sh[4828]: Listening on LPF/br-lab/de:59:b3:cc:5d:26/192.168.1.0/24
+Sep 27 13:25:24 it123 sh[4828]: Sending on   LPF/br-lab/de:59:b3:cc:5d:26/192.168.1.0/24
+Sep 27 13:25:24 it123 sh[4828]: Sending on   Socket/fallback/fallback-net
+Sep 27 13:25:24 it123 dhcpd[4828]: Sending on   LPF/br-lab/de:59:b3:cc:5d:26/192.168.1.0/24
+Sep 27 13:25:24 it123 dhcpd[4828]: Sending on   Socket/fallback/fallback-net
+Sep 27 13:25:24 it123 dhcpd[4828]: Server starting service.
+Sep 27 13:26:08 it123 dhcpd[4828]: DHCPDISCOVER from 02:00:00:07:00:01 via br-lab
+Sep 27 13:26:09 it123 dhcpd[4828]: DHCPOFFER on 192.168.1.160 to 02:00:00:07:00:01 via br-lab
+Sep 27 13:26:09 it123 dhcpd[4828]: DHCPREQUEST for 192.168.1.160 (192.168.1.150) from 02:00:00:07:00:01 via br-lab
+Sep 27 13:26:09 it123 dhcpd[4828]: DHCPACK on 192.168.1.160 to 02:00:00:07:00:01 via br-lab
+WEEK7_ALL_TESTS_PASSED

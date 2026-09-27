@@ -1,0 +1,10 @@
+options {
+    directory "/var/cache/bind";
+    listen-on { 127.0.0.1; 192.168.1.150; };
+    listen-on-v6 { none; };
+    allow-query { 127.0.0.1; 192.168.1.0/24; };
+    allow-transfer { none; };
+    recursion no;
+    dnssec-validation auto;
+    version "not disclosed";
+};

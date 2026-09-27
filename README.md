@@ -19,3 +19,10 @@ The Week 2 report remains a historical draft. Ubuntu account recovery subsequent
 Week 3 was executed and verified in Ubuntu. Windows Server is deferred at the student's request.
 
 VM disks, ISO installers, passwords, and temporary rendering files are excluded from version control.
+
+## Week 7 - Configuring and securing network services
+
+- [Completed lab and configuration files](Week7/README.md)
+- [Procedure, results, and screenshots](Week7/lab_notes.md)
+
+DNS, Apache, DHCP and encrypted FTP were configured and verified in the Ubuntu VM. The exact lab subnet was demonstrated on an isolated network inside Ubuntu.

@@ -1,0 +1,3 @@
+configs/** text eol=lf
+# Preserve collected terminal output byte-for-byte, including original line endings.
+evidence/** -text

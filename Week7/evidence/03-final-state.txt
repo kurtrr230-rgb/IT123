@@ -1,0 +1,74 @@
+2026-09-27T13:27:30+00:00
+=== PACKAGE VERSIONS ===
+apache2	2.4.66-2ubuntu2.4
+bind9	1:9.20.24-1ubuntu0.3
+isc-dhcp-server	4.4.3-P1-4ubuntu2
+ufw	0.36.2-9build1
+vsftpd	3.0.5-0.4
+=== SERVICE STATE ===
+named: active
+enabled
+apache2: active
+enabled
+isc-dhcp-server: active
+enabled
+vsftpd: active
+enabled
+=== STATIC LAB ADDRESS ===
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           UP             10.0.2.15/24 metric 100 fd17:625c:f037:2:a00:27ff:fe30:e4a2/64 fe80::a00:27ff:fe30:e4a2/64 
+br-lab           DOWN           192.168.1.150/24 
+=== FIREWALL ===
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+192.168.1.150 40000:40010/tcp on br-lab ALLOW IN    192.168.1.0/24            
+192.168.1.150 21/tcp on br-lab ALLOW IN    192.168.1.0/24            
+67/udp on br-lab           ALLOW IN    Anywhere                  
+192.168.1.150 53/tcp on br-lab ALLOW IN    192.168.1.0/24            
+192.168.1.150 53/udp on br-lab ALLOW IN    192.168.1.0/24            
+21/tcp                     DENY IN     Anywhere                  
+40000:40010/tcp            DENY IN     Anywhere                  
+22/tcp                     ALLOW IN    Anywhere                  
+80/tcp                     ALLOW IN    Anywhere                  
+21/tcp (v6)                DENY IN     Anywhere (v6)             
+40000:40010/tcp (v6)       DENY IN     Anywhere (v6)             
+22/tcp (v6)                ALLOW IN    Anywhere (v6)             
+80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+67/udp (v6) on br-lab      ALLOW IN    Anywhere (v6)             
+
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 192.168.1.150 40000:40010/tcp on br-lab ALLOW IN    192.168.1.0/24            
+[ 2] 192.168.1.150 21/tcp on br-lab ALLOW IN    192.168.1.0/24            
+[ 3] 67/udp on br-lab           ALLOW IN    Anywhere                  
+[ 4] 192.168.1.150 53/tcp on br-lab ALLOW IN    192.168.1.0/24            
+[ 5] 192.168.1.150 53/udp on br-lab ALLOW IN    192.168.1.0/24            
+[ 6] 21/tcp                     DENY IN     Anywhere                  
+[ 7] 40000:40010/tcp            DENY IN     Anywhere                  
+[ 8] 22/tcp                     ALLOW IN    Anywhere                  
+[ 9] 80/tcp                     ALLOW IN    Anywhere                  
+[10] 21/tcp (v6)                DENY IN     Anywhere (v6)             
+[11] 40000:40010/tcp (v6)       DENY IN     Anywhere (v6)             
+[12] 22/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[13] 80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+[14] 67/udp (v6) on br-lab      ALLOW IN    Anywhere (v6)             
+
+=== FTP ACCOUNT ALLOWLIST ===
+kadmin
+drwxr-xr-x 3 root   root   4096 Sep 27 13:25 /srv/ftp/kadmin
+drwxr-x--- 2 kadmin kadmin 4096 Sep 27 13:25 /srv/ftp/kadmin/uploads
+=== FTPS CERTIFICATE ===
+subject=CN=www.company.local
+notBefore=Sep 27 13:25:05 2026 GMT
+notAfter=Sep 27 13:25:05 2027 GMT
+sha256 Fingerprint=3E:21:F2:5F:5E:D7:C3:03:59:46:F1:A3:4B:33:DC:82:50:37:C3:DD:FC:CA:B0:66:14:C3:E8:08:3D:3C:45:50
+=== TEMPORARY TEST RESOURCES REMOVED ===
+id: 'week7check': no such user
+Temporary FTP test account removed
