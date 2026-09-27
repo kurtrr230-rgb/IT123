@@ -1,0 +1,95 @@
+STEP 2: STATIC IP
+Sun Sep 27 08:03:22 AM UTC 2026
+CONFIG
+# Temporary lab configuration for this VM's VirtualBox NAT network.
+# The guide's 192.168.1.150/24 requires a different virtual network.
+network:
+  version: 2
+  ethernets:
+    enp0s3:
+      dhcp4: false
+      dhcp6: true
+      match:
+        macaddress: 08:00:27:30:e4:a2
+      set-name: enp0s3
+      addresses:
+        - 10.0.2.150/24
+      routes:
+        - to: default
+          via: 10.0.2.2
+      nameservers:
+        addresses: [8.8.8.8, 8.8.4.4]
+INTERFACE
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    altname enx08002730e4a2
+    inet 10.0.2.150/24 brd 10.0.2.255 scope global enp0s3
+       valid_lft forever preferred_lft forever
+ROUTE
+default via 10.0.2.2 dev enp0s3 proto static 
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.150 
+DNS SERVERS
+Link 2 (enp0s3): 8.8.8.8 8.8.4.4 fd17:625c:f037:2::3
+GATEWAY PING
+PING 10.0.2.2 (10.0.2.2) 56(84) bytes of data.
+64 bytes from 10.0.2.2: icmp_seq=1 ttl=64 time=1.23 ms
+64 bytes from 10.0.2.2: icmp_seq=2 ttl=64 time=1.06 ms
+64 bytes from 10.0.2.2: icmp_seq=3 ttl=64 time=0.837 ms
+64 bytes from 10.0.2.2: icmp_seq=4 ttl=64 time=1.23 ms
+
+--- 10.0.2.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3026ms
+rtt min/avg/max/mdev = 0.837/1.089/1.229/0.160 ms
+INTERNET PING
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=64 time=15.7 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=64 time=15.8 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=64 time=56.4 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=64 time=159 ms
+
+--- 8.8.8.8 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 200505ms
+rtt min/avg/max/mdev = 15.734/61.807/159.302/58.675 ms
+NAME PING
+PING google.com (172.217.27.78) 56(84) bytes of data.
+64 bytes from nrt12s15-in-f14.1e100.net (172.217.27.78): icmp_seq=1 ttl=64 time=126 ms
+64 bytes from nrt12s15-in-f14.1e100.net (172.217.27.78): icmp_seq=2 ttl=64 time=24.8 ms
+64 bytes from nrt12s15-in-f14.1e100.net (172.217.27.78): icmp_seq=3 ttl=64 time=17.3 ms
+64 bytes from nrt12s15-in-f14.1e100.net (172.217.27.78): icmp_seq=4 ttl=64 time=19.9 ms
+
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3311ms
+rtt min/avg/max/mdev = 17.332/46.910/125.626/45.526 ms
+DNS LOOKUP
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 172.217.27.78
+Name:	google.com
+Address: 2404:6800:4017:80a::200e
+
+TRACEROUTE
+traceroute to google.com (172.217.27.78), 12 hops max, 60 byte packets
+ 1  _gateway (10.0.2.2)  5.298 ms
+ 2  *
+ 3  *
+ 4  *
+ 5  *
+ 6  *
+ 7  *
+ 8  *
+ 9  *
+10  *
+11  *
+12  *
+LISTENING SOCKETS
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:Port
+udp   UNCONN 0      0         127.0.0.54:53        0.0.0.0:*   
+udp   UNCONN 0      0      127.0.0.53%lo:53        0.0.0.0:*   
+udp   UNCONN 0      0          127.0.0.1:323       0.0.0.0:*   
+udp   UNCONN 0      0              [::1]:323          [::]:*   
+tcp   LISTEN 0      4096         0.0.0.0:22        0.0.0.0:*   
+tcp   LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*   
+tcp   LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*   
+tcp   LISTEN 0      4096            [::]:22           [::]:*   

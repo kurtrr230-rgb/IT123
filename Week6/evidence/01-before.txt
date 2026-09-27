@@ -1,0 +1,22 @@
+STEP 1: DHCP BASELINE
+Sun Sep 27 07:57:25 AM UTC 2026
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    altname enx08002730e4a2
+    inet 10.0.2.15/24 metric 100 brd 10.0.2.255 scope global dynamic enp0s3
+       valid_lft 86307sec preferred_lft 86307sec
+default via 10.0.2.2 dev enp0s3 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100 
+10.0.2.2 dev enp0s3 proto dhcp scope link src 10.0.2.15 metric 100 
+192.168.100.1 via 10.0.2.2 dev enp0s3 proto dhcp src 10.0.2.15 metric 100 
+Link 2 (enp0s3): 192.168.100.1 fd17:625c:f037:2::3
+NETPLAN BEFORE
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    enp0s3:
+      dhcp4: true
+      dhcp6: true
+      match:
+        macaddress: 08:00:27:30:e4:a2
+      set-name: enp0s3
+  version: 2

@@ -1,0 +1,18 @@
+# Temporary lab configuration for this VM's VirtualBox NAT network.
+# The guide's 192.168.1.150/24 requires a different virtual network.
+network:
+  version: 2
+  ethernets:
+    enp0s3:
+      dhcp4: false
+      dhcp6: true
+      match:
+        macaddress: 08:00:27:30:e4:a2
+      set-name: enp0s3
+      addresses:
+        - 10.0.2.150/24
+      routes:
+        - to: default
+          via: 10.0.2.2
+      nameservers:
+        addresses: [8.8.8.8, 8.8.4.4]
