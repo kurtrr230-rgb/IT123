@@ -42,12 +42,13 @@ def table(rows, widths):
 
 def figure(filename, caption):
     path = root / 'screenshots' / filename
+    crop_height = 430 if filename.startswith('03-') else 170
     with PILImage.open(path) as original:
-        region = original.crop((0, 0, original.width, 170))
+        region = original.crop((0, 0, original.width, crop_height))
         data = BytesIO()
         region.save(data, format='PNG')
     data.seek(0)
-    story.append(Image(data, width=495, height=495 * 170 / original.width))
+    story.append(Image(data, width=495, height=495 * crop_height / original.width))
     p(caption, 'Normal')
 
 def footer(canvas, doc):
@@ -100,6 +101,9 @@ figure('01-users-and-groups.png', 'Figure 1. User IDs, supplementary groups, hom
 story.append(Spacer(1, 20))
 p('Appendix B - Directory permission evidence', 'Heading2')
 figure('02-directory-permissions.png', 'Figure 2. Final ownership and modes. kadmin receives Permission denied when listing the restricted directories. Screenshot cropped to its terminal output; the full capture is in screenshots/.')
+story.append(Spacer(1, 20))
+p('Appendix C - Access-test evidence', 'Heading2')
+figure('03-access-test-results.png', 'Figure 3. Successful and denied operations from the Ubuntu test run, ending with zero failed checks. Screenshot cropped to the test output; the full capture is in screenshots/.')
 
 SimpleDocTemplate(str(pdf), pagesize=A4, leftMargin=50, rightMargin=50,
                   topMargin=45, bottomMargin=50).build(

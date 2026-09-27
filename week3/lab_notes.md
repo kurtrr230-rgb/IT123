@@ -35,6 +35,7 @@ Set student2's comment to `Test account for Week 3 Lab`. Directory execute permi
 
 - [User records and group memberships](screenshots/01-users-and-groups.png), including student2's comment.
 - [Final directory ownership and modes](screenshots/02-directory-permissions.png), with the mode transition recorded in the [test output](verification-output.txt).
+- [Access-test console screenshot](screenshots/03-access-test-results.png), showing allowed operations, permission denials, and zero failed checks.
 - Allowed and denied operations recorded in [verification results](verification.md) and the raw test output.
 - Password-backed logins for student2, faculty2, and student4, observed in the VM SSH session. Those login outputs are summarized in the report; they were not captured as screenshots.
 
