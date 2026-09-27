@@ -1,0 +1,33 @@
+uid=1001(student2) gid=1001(student2) groups=1001(student2),100(users),1004(labusers)
+uid=1002(faculty2) gid=1002(faculty2) groups=1002(faculty2),100(users),1005(facultygrp)
+uid=1003(student4) gid=1003(student4) groups=1003(student4),100(users),1006(studentgrp)
+drwxrwx--- 770 root:labusers /labdata
+drwxrwx--- 770 root:facultygrp /facultydata
+drwxr-x--- 750 root:studentgrp /studentdata
+Week 3 permission verification sample
+PASS | student2 | read lab sample at 770 | exit=0
+PASS | student2 | create lab file at 770 | exit=0
+drwxr-x--- 750 root:labusers /labdata
+Week 3 permission verification sample
+PASS | student2 | read lab sample at 750 | exit=0
+touch: cannot touch '/labdata/denied-test.txt': Permission denied
+PASS | student2 | create lab file at 750 | exit=1
+Week 3 permission verification sample
+PASS | faculty2 | read faculty sample | exit=0
+PASS | faculty2 | create faculty file | exit=0
+Week 3 permission verification sample
+PASS | student4 | read student sample | exit=0
+touch: cannot touch '/studentdata/denied-test.txt': Permission denied
+PASS | student4 | create student file | exit=1
+sh: 1: cannot create /studentdata/sample.txt: Permission denied
+PASS | student4 | modify existing student sample | exit=2
+cat: /facultydata/sample.txt: Permission denied
+PASS | student4 | read faculty sample | exit=1
+cat: /studentdata/sample.txt: Permission denied
+PASS | faculty2 | read student sample | exit=1
+cat: /facultydata/sample.txt: Permission denied
+PASS | student2 | read faculty sample | exit=1
+cat: /studentdata/sample.txt: Permission denied
+PASS | student2 | read student sample | exit=1
+Failed checks: 0
+Now verify passwords through interactive logins; runuser does not test them.
